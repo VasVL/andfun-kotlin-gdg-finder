@@ -104,7 +104,7 @@
                     android:layout_marginTop="4dp"
                     android:singleLine="true"/>
 
-            <!-- TODO (03) Update EditTextRegion’s bottom constraint to reflect the new wrapper layout
+            <!-- (03) Update EditTextRegion’s bottom constraint to reflect the new wrapper layout
                  instead of the individual elements. -->
             <EditText
                     android:id="@+id/EditTextRegion"
@@ -118,32 +118,30 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="4dp"
-                    app:layout_constraintBottom_toTopOf="@+id/EditTextWhy"
+                    app:layout_constraintBottom_toTopOf="@+id/contentGroup"
                     android:singleLine="true"/>
 
-            <!-- TODO (01) Uncomment the LinearLayout code surrounding labelTextWhy and EditTextWhy. -->
-            <!--wrap in a layout to group-->
-            <!--<LinearLayout -->
-            <!--android:id="@+id/contentGroup"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:focusable="true"-->
-            <!--app:layout_constraintTop_toBottomOf="@id/EditTextRegion"-->
-            <!--android:orientation="vertical"-->
-            <!--app:layout_constraintStart_toStartOf="@+id/EditTextRegion"-->
-            <!--app:layout_constraintEnd_toEndOf="@+id/EditTextRegion"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--app:layout_constraintBottom_toTopOf="@+id/button"-->
-            <!--android:layout_marginBottom="8dp">-->
+            <!-- (01) Uncomment the LinearLayout code surrounding labelTextWhy and EditTextWhy. -->
+            <!-- wrap in a layout to group -->
+            <LinearLayout
+            android:id="@+id/contentGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/EditTextRegion"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/EditTextRegion"
+            app:layout_constraintEnd_toEndOf="@+id/EditTextRegion"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            android:layout_marginBottom="8dp">
 
-            <!-- TODO (02) Remove layoutMargins from  labelTextWhy and EditTextWhy. -->
+            <!-- (02) Remove layoutMargins from labelTextWhy and EditTextWhy. -->
             <TextView
                     android:id="@+id/labelTextWhy"
                     android:text="@string/motivation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="32dp"
                     android:contentDescription="@string/motivation"
                     app:layout_constraintTop_toBottomOf="@+id/EditTextRegion"
                     android:layout_marginBottom="1dp"
@@ -160,15 +158,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/EditTextRegion"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/button"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginBottom="8dp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/button" />
 
-            <!--</LinearLayout>-->
+            </LinearLayout>
 
-            <!-- TODO (04) Update the button’s top constraint to reflect the new wrapper layout
+            <!-- (04) Update the button’s top constraint to reflect the new wrapper layout
                  instead of the individual elements. -->
             <Button
                     android:id="@+id/button"
@@ -177,7 +171,7 @@
                     android:layout_height="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/EditTextWhy"
+                    app:layout_constraintTop_toBottomOf="@+id/contentGroup"
                     android:backgroundTint="#00FF00"
                     android:textColor="#FF0000"
                     android:textSize="12sp"
