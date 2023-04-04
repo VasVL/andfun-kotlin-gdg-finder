@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import com.example.android.gdgfinder.R
 import com.example.android.gdgfinder.databinding.AddGdgFragmentBinding
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.add_gdg_fragment.*
 
 class AddGdgFragment : Fragment() {
 
@@ -36,7 +37,9 @@ class AddGdgFragment : Fragment() {
                 ).show()
                 viewModel.doneShowingSnackbar()
 
-                // TODO (01) Use the binding to set the button's text and content description.
+                // (01) Use the binding to set the button's text and content description.
+                binding.button.contentDescription = getString(R.string.submitted)
+                binding.button.text = getString(R.string.done)
 
             }
         })
