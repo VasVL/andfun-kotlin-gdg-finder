@@ -1,8 +1,8 @@
 <resources>
 
-    <!--  TODO (01) Change AppTheme’s parent from Light to DayNight. -->
+    <!-- (01) Change AppTheme’s parent from Light to DayNight. -->
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
